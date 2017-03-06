@@ -229,18 +229,22 @@ addCommentInputValue();
 <?php endif; ?>
 <?php endif; ?>
 <?php $this->footer(); ?>
-<script src="//cdn.bootcss.com/headroom/0.9.1/headroom.min.js"></script>
-<?php if ($this->options->useHighline == 'able'): ?>
-<script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="//cdn.heiybb.com/headroom/0.9.1/headroom.min.js"></script>
+<?php if ($this->options->useHighline == 'able' && $this->is('post')): ?>
+<script src="//cdn.heiybb.com/highlight/highlight.js"></script>
 <?php endif; ?>
 <?php if ($this->options->pjaxSet == 'able'): ?>
-<script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js"></script>
+<script src="//cdn.heiybb.com/instantclick.min.js"></script>
 <?php endif; ?>
 <?php if ($this->options->fastClickSet == 'able'): ?>
-<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+<script src="//cdn.heiybb.com/fastclick/1.0.6/fastclick.min.js"></script>
 <?php endif; ?>
 <script>
 <?php if($this->is('post')): ?>
+var blocks = document.querySelectorAll('pre code');
+    for (var i = 0; i < blocks.length; i++) {
+        hljs.highlightBlock(blocks[i]);
+    }
 var postDirectory = new Headroom(document.getElementById("directory-content"), {
     tolerance: 0,
     offset : 100,
@@ -270,54 +274,21 @@ if ('addEventListener' in document) {
 }
 <?php endif; ?>
 </script>
-<?php if ($this->options->useMathjax == 'able'): ?>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        inlineMath:  [ ["$", "$"] ],
-        displayMath: [ ["$$","$$"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
-        ignoreClass:"comment-content"
-    },
-    "HTML-CSS": {
-        availableFonts: ["STIX","TeX"],
-        showMathMenu: false
-    }
-});
-MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-</script>
-<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<?php endif; ?>
+
 <?php if($this->options->GoogleAnalytics): ?>
 <script>
 <?php $this->options->GoogleAnalytics(); ?>
 </script>
 <?php endif; ?>
+
 <?php if ($this->options->pjaxSet == 'able'): ?>
 <script data-no-instant>
 InstantClick.on('change', function(isInitialLoad){
-    <?php if ($this->options->useHighline == 'able'): ?>
-
-    var blocks = document.querySelectorAll('pre code');
-    for (var i = 0; i < blocks.length; i++) {
-        hljs.highlightBlock(blocks[i]);
-    }
-    <?php endif; ?>
-
-    if (isInitialLoad === false) {
+if (isInitialLoad === false) {
     <?php if($this->options->GoogleAnalytics): ?>
         if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search);
     <?php endif; ?>
-    <?php if ($this->options->useMathjax == 'able'): ?>
-        if (typeof MathJax !== 'undefined'){MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}
-    <?php endif; ?>
-
     }
-
 });
 InstantClick.init();
 </script>

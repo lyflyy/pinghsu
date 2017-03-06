@@ -40,27 +40,27 @@ $this->need('header.php');
 						<div class="item-title"><a href="<?php $this->permalink(); ?>"><?php $this->title(); ?></a></div>
 						<div class="item-meta clearfix">
 							<?php if (array_key_exists('book',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-book" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-book" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('game',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-game" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-game" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('note',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-note" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-note" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('chat',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-chat" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-chat" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('code',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-code" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-code" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('image',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-image" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-image" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('web',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-web" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-web" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('link',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-link" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-link" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('design',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-design" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-design" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php elseif (array_key_exists('lock',unserialize($this->___fields()))): ?>
-							<div class="item-meta-ico bg-ico-lock" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-lock" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
 							<?php else : ?>
-							<div class="item-meta-ico bg-ico-<?php echo randBgIco(); ?>" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-<?php echo randBgIco(); ?>" style="background: url(https://cdn.heiybb.com/pingshu/images/bg-ico.png); ?>) no-repeat;background-size: 40px auto;"></div>
                             <?php endif; ?>
 							<div class="item-meta-cat"><?php $this->category(''); ?></div>
 						</div>
